@@ -1,21 +1,15 @@
-import  {Schema, model} from 'mongoose';
+import  {Schema} from 'mongoose';
 
-export interface IngredientsType {
-name: string,
-rating: number,
-about: string,
-ingredients: string,
-time: number
+
+export interface IngredientType {
+    ingredient: String,
+    amount: Number,
+    unit: String 
 }
 
-const schema = new Schema<IngredientsType>({
-name:{type: String, Required:false},
-rating: {type: Number, Required:false},
-about: {type: String, Required:false},
-ingredients: {type: String, Required:false},
-time: {type: Number, Required:false}
+
+export const IngredientSchema = new Schema<IngredientType>({
+    ingredient: {type: String, required: true},
+    amount: {type: Number, required: true},
+    unit: {type: String, required: true}  
 })
-
-const IngredientsModel = model<IngredientsType>('ingredients', schema)
-
-export default IngredientsModel
