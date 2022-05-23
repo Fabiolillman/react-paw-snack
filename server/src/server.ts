@@ -7,14 +7,15 @@ import cors from 'cors'
 
 
 connect('mongodb://localhost:27017/paw-snack')
-// connect('mongodb+srv://paw-snack:hImuj6xPoVCuQGX7@cluster0.bk541.mongodb.net/?retryWrites=true&w=majority')
+// connect('mongodb+srv://paw-snack:hImuj6xPoVCuQGX7@cluster0.bk541.mongodb.net/sample-airbnb?retryWrites=true&w=majority')
 
 const app = express()
 app.use(json());
 app.use(cors({
     origin: "http://localhost:3000"
 }));
-const port =3001
+
+const port =process.env.PORT || 3001
 
 app.use('/ingredients', ingredientsRouter)
 app.use('/category', categoryRouter)
