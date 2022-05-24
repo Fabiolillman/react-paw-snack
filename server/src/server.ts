@@ -8,8 +8,8 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 // connect('mongodb://localhost:27017/paw-snack')
-// connect('mongodb+srv://paw-snack:1cXtHgQRPKzmHAgX@cluster0.bk541.mongodb.net/paw-snack?retryWrites=true&w=majority')
-connect(`${process.env.MONGO_DB_CONNECTION_STRING}`)
+connect('mongodb+srv://paw-snack:1cXtHgQRPKzmHAgX@cluster0.bk541.mongodb.net/paw-snack?retryWrites=true&w=majority')
+// connect(`${process.env.MONGO_DB_CONNECTION_STRING}`)
 
 const app = express()
 app.use(json());
