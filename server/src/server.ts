@@ -13,9 +13,11 @@ connect(`${process.env.MONGO_DB_CONNECTION_STRING}`)
 
 const app = express()
 app.use(json());
-app.use(cors({
-    origin: "http://localhost:3000"
-}));
+app.use(cors(
+    // {
+    // origin: "http://localhost:3000"
+// }
+));
 
 const port =process.env.PORT || 3001
 
