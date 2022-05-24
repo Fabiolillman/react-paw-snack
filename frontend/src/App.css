@@ -1,0 +1,32 @@
+
+
+.FullWrap{
+  display: flex;
+}
+
+.CatagorySection{
+  /* color: black; */
+  margin-right: 1rem;
+  width: 400px;
+  background-color: grey;
+padding: 0.5rem;
+box-sizing: border-box;
+}
+
+.IngredientsWrap{
+  /* color: red; */
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on {
+  color: rgb(19, 19, 16);
+}
+.off {
+  color: #ccc;
+}
+
