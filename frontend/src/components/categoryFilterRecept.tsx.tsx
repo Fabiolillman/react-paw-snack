@@ -5,7 +5,6 @@ import SearchBar from "./searchbar";
 
 
 const FetchListByCategory=()=>{
-
     const [category, setCategory] = useState<any>([]);
     const params = useParams();
     const fetchRecipes = async () => {
@@ -38,36 +37,7 @@ const FetchListByCategory=()=>{
     )
 }
 
+
+
+
 export default FetchListByCategory
-
-
-
-
-    // const [category, setCategory] = useState<any>([]);
-    // console.log("Recept title", category);
-    // // const { Id } = useParams<any>()
-    // const params = useParams();
-    // useEffect(() => {
-    //     const getReceptById = async () => {
-    //         console.log("this is before params", params)
-    //     const category = await fetch(`http://localhost:3001/category/${params.id}/ingredients`)
-    //     .then(res => res.json())
-    //     console.log("this is after params", params)
-    //     await setCategory(category)
-    //     console.log(category);
-    //     }
-    //     getReceptById();
-     
-    // }, [])
-    // console.log("Recept title", category);
-
-    // const [recipes, setRecipes] = useState<any>([]);
-    // const { selectedCatagory } = useParams()
-    // useEffect(() => {
-    //     const fetchRecipes = async () => {
-    //         const recipes = await fetch(`http://localhost:3001/category/${selectedCatagory}/ingredients`)
-    //         .then(res => res.json())
-    //         setRecipes(recipes);
-    //     }
-    //     fetchRecipes();
-    // }, [selectedCatagory])

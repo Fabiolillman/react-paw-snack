@@ -3,14 +3,9 @@ import styled from "styled-components";
 import TimeAmount from "./timeandamount";
 import { Link } from "react-router-dom";
 
-
 const SingleItem = ({recept}:any)=>{
-    const test = ()=>{
-        console.log(recept.title)
-    }
     return (
-        <FullWrap>
-        
+        <FullWrap>     
         <div className="BorderWrapper">
         <div className="MyStyledDiv">
         <div className="NameStarWrap">
@@ -21,22 +16,16 @@ const SingleItem = ({recept}:any)=>{
         </div>
         <p>{recept.description}</p>
         </div>
-        {/* <p>img name{recept.imageUrl}</p> */}
         <img src={recept.imageUrl} alt="" />
         <TimeAmount fetchList={recept}/>
-        </div>
-       
+        </div>     
         </FullWrap>
         )
 }
 
-
-
-
 const FullWrap = styled.div`
-
      .BorderWrapper{
-        border: 3px solid gray;
+    border: 3px solid gray;
     border-radius: 4px;
     box-sizing: border-box;
     align-items: center;
@@ -51,20 +40,7 @@ const FullWrap = styled.div`
      .MyStyledDiv{
     border-radius: 4px;
     box-sizing: border-box;
-    /* display: flex; */
     align-items: center;
     }
 `;
-// const MyStyledDiv = styled.div`
-//     border-radius: 4px;
-//     box-sizing: border-box;
-//     align-items: center;
-// `;
-
-// const NameStarWrap = styled.div`
-//     border-radius: 4px;
-//     box-sizing: border-box;
-//     display: flex;
-//     align-items: center;
-// `;
 export default SingleItem

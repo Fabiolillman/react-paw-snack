@@ -1,5 +1,3 @@
-// import styled from "styled-components"
-// import '../singlepage.css';
 import StarRating from '../components/starrating';
 import TimeAmount from '../components/timeandamount';
 import styled from 'styled-components';
@@ -7,24 +5,18 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 
-
-
 const SingleProduct = ()=>{
     const [recept, setRecept] = useState<any>([]);
     const params = useParams();
     useEffect(() => {
         const getReceptById = async () => {
-            // console.log("this is before params", params)
         const recepts = await fetch(`${process.env.REACT_APP_API_BASE_URL}/ingredients/${params.id}`)
         .then(res => res.json())
-        // console.log("this is after params", params)
         await setRecept(recepts)
-        // console.log(recepts);
         }
         getReceptById();
-     
-    }, [])
-    // console.log("Recept title", recept);
+    }, )
+
 
     return(
         <>

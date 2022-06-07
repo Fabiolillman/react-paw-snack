@@ -6,7 +6,6 @@ import styled from "styled-components"
 const SearchBar = ({value,setSearch}:any)=>{
     return (
       <MyStyledDiv> 
-      {/* <button type="submit">Button</button>   */}
       <input  onChange={e => setSearch(e.target.value)} value={value} type="text" placeholder="Search"/>
       </MyStyledDiv>
         )
@@ -15,7 +14,7 @@ const SearchBar = ({value,setSearch}:any)=>{
 
 
 const MyStyledDiv = styled.div`
-/* margin-left: 100px; */
+margin: auto;
    width: 70%;
    height: 2.5rem;
     background-color: white;
@@ -25,7 +24,7 @@ const MyStyledDiv = styled.div`
     display: flex;
     align-items: center;
  & input{
-  width: 40%;
+  width: 100%;
   
    border: none;
     border-radius: 4px;
@@ -33,7 +32,6 @@ const MyStyledDiv = styled.div`
  }
   & button{
     width: 4rem;
-    /* outline-style: none; */
    height: 2.3rem;
   }
 `;

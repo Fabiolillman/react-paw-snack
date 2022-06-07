@@ -6,28 +6,26 @@ import axios from "axios";
 
 const StarRating = ({sendRating, sendId}:any)=>{
  
- 
-  const test = sendRating[sendRating.length-1]
+  // const startRating = sendRating[sendRating.length-1]
+ const startRating = sendRating.reduce((a:number,b:number)=>a+b,0)/sendRating.length
 
-  console.log("THIS IS THE url YOU'RE LOOKING FOR", process.env.REACT_APP_API_BASE_URL)
     const location = useLocation()
-    const [rating, setRating] = useState(test);
+    const [rating, setRating] = useState(startRating);
     const [hover, setHover] = useState(0);
     const [isPending, setIsPending] = useState<boolean>(false);
-    console.log("Set Rating value",rating)
     const newRating ={
       "ratings": rating
     }
-  //  setIsPending(true)
+
    const PostRating = async ()=>{
     axios.post(`${process.env.REACT_APP_API_BASE_URL}/ingredients/${sendId}/ratings`, newRating )
-    .then(response=>{
+    .then(()=>{
       setIsPending(true)
-      console.log(response)
     }).catch(error=>{console.log("THIS IS ERROR HANDLER", error)})
    }
    
     return (
+     
      <>{isPending && <p>Tack för rösten!</p>}
        {!isPending &&   <div  className="star-rating">
         {[...Array(5)].map((star, index) => {
@@ -47,24 +45,11 @@ const StarRating = ({sendRating, sendId}:any)=>{
           );
         })}
        { location.pathname.includes(sendId) && <button  onClick={() => PostRating()}>Submit</button>}
-       
       </div>}
       
      </>
     );
     
 }
-
-// const MyStyledButton = styled.button`
- /* &:hover {
-        background-color: yellow;
-    } */
-    /* background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer; */
-// `;
-
-
 
 export default StarRating

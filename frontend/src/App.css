@@ -1,20 +1,25 @@
-
+*{
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+  /* margin: 0; */
+}
 
 .FullWrap{
   display: flex;
 }
 
 .CatagorySection{
-  /* color: black; */
+  /* position: fixed; */
+  display: flex;
+  justify-content: center;
   margin-right: 1rem;
-  width: 400px;
-  background-color: grey;
-padding: 0.5rem;
-box-sizing: border-box;
-}
-
-.IngredientsWrap{
-  /* color: red; */
+  height: 25rem;
+  width: 15rem;
+  margin: 1rem;
+  background-color: black;
+  box-sizing: border-box;
+  border-radius: 0.8rem;
 }
 
 button {
