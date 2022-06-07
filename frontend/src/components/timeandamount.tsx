@@ -1,21 +1,31 @@
 import styled from "styled-components";
+// import img from "../asset/./bone.png"
 
 const TimeAmount = ({fetchList}:any)=>{
-  // console.log(fetchList, "Inside Time and igredients")
     return (
       <TimeAmountWrap>
       <p>Ingredients ({fetchList.ingredients.length})</p>
-      <p>|</p>
-      <p>Ingrediens Tid{fetchList.timeInMins}</p>
+      <p className="distance"></p>
+      <p>Cook Time {fetchList.timeInMins} mins</p>
+      <p>Test</p>
       </TimeAmountWrap>
         )
 }
 
 const TimeAmountWrap = styled.div`
+background-color: gray;
+    /* padding: 0 0.5rem 0 0.5rem; */
+    background-size:3rem;
     border-radius: 4px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
+    & .distance{
+      width: 0.1rem;
+      background-color: #cbcbcb;
+      height: 1rem;
+      margin:0.43rem
+      }
 `;
 
 export default TimeAmount
