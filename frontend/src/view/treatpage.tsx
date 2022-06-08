@@ -2,7 +2,7 @@ import '../App.css';
 import Category from '../components/category';
 import ItemList from '../components/itemList';
 
-const FrontPage = ()=>(
+const TreatPage = ()=>(
   <>
 <div className="FullWrap">
   <aside className="CatagorySection"><Category/></aside>
@@ -13,4 +13,4 @@ const FrontPage = ()=>(
   </>
 )
 
-export default FrontPage;
+export default TreatPage;

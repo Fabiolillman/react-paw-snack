@@ -32,18 +32,19 @@ category.map((category:any,) =>
 
 
 const CategoryList = styled.li`
+font-size: 1.3rem;
 font-weight: 500;
 list-style: none;
 color: red;
 text-align: center;
-margin: 1rem 0 1rem 0;
-line-height: 4rem;
+margin: 0.5rem 0 0.5rem 0;
+line-height: 6rem;
 /* border: 3px solid white; */
-min-width: 10rem;
-height: 4rem;
+width: 12rem;
+height: 6rem;
 background-image: url(${img});
 background-repeat: no-repeat;
-background-size: 12rem 10rem;
+background-size: 15rem 12.5rem;
 background-position: center;
 transition: transform 0.3s ease-in-out;
 &:hover{

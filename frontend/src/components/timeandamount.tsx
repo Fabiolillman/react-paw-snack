@@ -7,12 +7,13 @@ const TimeAmount = ({fetchList}:any)=>{
       <p>Ingredients ({fetchList.ingredients.length})</p>
       <p className="distance"></p>
       <p>Cook Time {fetchList.timeInMins} mins</p>
-      <p>Test</p>
       </TimeAmountWrap>
         )
 }
 
 const TimeAmountWrap = styled.div`
+display: flex;
+justify-content: center;
 background-color: gray;
     /* padding: 0 0.5rem 0 0.5rem; */
     background-size:3rem;
