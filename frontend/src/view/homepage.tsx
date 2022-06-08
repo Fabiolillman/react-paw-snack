@@ -6,6 +6,7 @@ import img3 from "../asset/./cc glasses.png"
 import img4 from "../asset/./glasses.png"
 import img5 from "../asset/./white-paw.png"
 import img6 from "../asset/./filled-bone.png"
+import img7 from "../asset/./sky.jpg"
 
 
 const HomePage=()=>{
@@ -30,7 +31,7 @@ return (
         <aside className="customer">
             <h2>Reviewers</h2>
             <img src={img2} alt="It's just a cute dog" />
-            <p>Nr1 Doggo</p>
+            <p>Nr1 doggo</p>
             <img src={img4} alt="Another cute dog, not the same as the first one" />
             <p>Very cute dog indeed</p>
             <img src={img3} alt="Not the first or 2'nd dog from above" />
@@ -46,6 +47,9 @@ width: 100%;
 height: 100vh;
 display: flex;
 background-color: black;
+background-image: url(${img7});
+background-repeat: no-repeat;
+background-size: cover;
 justify-content: center;
 .frame{
     width: 4rem;

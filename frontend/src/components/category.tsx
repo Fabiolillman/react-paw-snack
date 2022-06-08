@@ -17,6 +17,7 @@ setCategory(category);
   },[])
 return(
 <>
+<aside className="CatagorySection">
 <ul>{
 category.map((category:any,) => 
 <Link to={`/category/${category._id}/ingredients`} key={category._id}>
@@ -24,6 +25,7 @@ category.map((category:any,) =>
 </CategoryList>
 </Link>
 )}</ul>
+</aside>
 </>
 )
 }

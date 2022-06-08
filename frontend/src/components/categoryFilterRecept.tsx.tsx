@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import SingleItem from "./item";
 import SearchBar from "./searchbar";
+import Category from "./category";
 
 
 const FetchListByCategory=()=>{
@@ -28,12 +29,14 @@ const FetchListByCategory=()=>{
   }, [search])
 
     return (
+        <>
         <div>
             <SearchBar sendValue={search} setSearch={setSearch}/>
             <div>
                 {category.map((recipe: any) => <SingleItem key={recipe._id} recept={recipe}/>)}
             </div>
         </div>
+        </>
     )
 }
 

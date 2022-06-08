@@ -22,7 +22,7 @@ const SingleProduct = ()=>{
         <>
         {recept.map((recept: any) => 
      <SinglePageStyle key={recept._id}>
-     <div className="SinglePageWrap">
+     {/* <div className="SinglePageWrap"> */}
      <h1>{recept.title}</h1>
      <div className="TopIntroWrap">
      <div>
@@ -32,14 +32,23 @@ const SingleProduct = ()=>{
      </div>
      </div>
      <img src={recept.imageUrl} alt="" />
+     </div>
+     <section>
+     <div>  
+     <h2>Ingredients</h2>
      <ul>
      {recept.ingredients.map((ingredients: any) => (<li key={ingredients.ingredient}>{ingredients.amount} {ingredients.unit} {ingredients.ingredient}</li>))}
      </ul>
+     </div>  
+     <div>
+         <h2>Instructions</h2>
      <ul>
      { recept.instructions.map((instructions: any) => (<li key={instructions}>{instructions}</li>))}
      </ul>
      </div>
-     </div>
+     </section>
+   
+     {/* </div> */}
      </SinglePageStyle>
         )} 
         </> 
@@ -47,6 +56,17 @@ const SingleProduct = ()=>{
 }
 
 const SinglePageStyle = styled.div`
+width: 100%;
+height: 100vh;
+display: flex;
+flex-direction: column;
+/* background-color: red; */
+section{
+    display: flex;
+}
+section ul{
+    background-color: orange;
+}
 .red{
     color: red;
 }

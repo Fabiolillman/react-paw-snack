@@ -12,6 +12,7 @@ const TimeAmount = ({fetchList}:any)=>{
 }
 
 const TimeAmountWrap = styled.div`
+width: 100%;
 display: flex;
 justify-content: center;
 background-color: gray;
@@ -25,7 +26,7 @@ background-color: gray;
       width: 0.1rem;
       background-color: #cbcbcb;
       height: 1rem;
-      margin:0.43rem
+      margin: 0 0.43rem
       }
 `;
 

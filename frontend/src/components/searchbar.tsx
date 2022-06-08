@@ -14,7 +14,8 @@ const SearchBar = ({value,setSearch}:any)=>{
 
 
 const MyStyledDiv = styled.div`
-margin: auto;
+
+margin: 1rem auto;
    width: 70%;
    height: 2.5rem;
     background-color: white;

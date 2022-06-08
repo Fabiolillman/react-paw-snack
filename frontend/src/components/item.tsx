@@ -26,6 +26,8 @@ const SingleItem = ({recept}:any)=>{
 }
 
 const FullWrap=styled.div` 
+border-radius: 15px;
+background-color: white;
 h1{
     margin: 1rem 0 1rem 0;
 }
