@@ -4,7 +4,6 @@ import ReceptModel, {ReceptType} from "./models/recept";
 
 export const getIngredients = async()=>{
 return await ReceptModel.find();
-
 }
 
 export const getIngredientsId = async(ReceptId:string)=>{
