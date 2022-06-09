@@ -26,7 +26,8 @@ const StarRating = ({sendRating, sendId}:any)=>{
    
     return (
      
-     <>{isPending && <p>Tack för rösten!</p>}
+     <>
+     {isPending && <p>Thanks for rating!</p>}
        {!isPending &&   <div  className="star-rating">
         {[...Array(5)].map((star, index) => {
           index += 1;
@@ -44,7 +45,7 @@ const StarRating = ({sendRating, sendId}:any)=>{
             </button>         
           );
         })}
-       { location.pathname.includes(sendId) && <button  onClick={() => PostRating()}>Submit</button>}
+       { location.pathname.includes(sendId) && <button  onClick={() => PostRating()}>Submit rating</button>}
       </div>}
       
      </>
